@@ -1,277 +1,39 @@
 body{
-  background-color: $mainGreen;
+  background-color: white;
   font-family: sans-serif;
   color: $mainBlue;
   font-size: 20px;
 }
 
-#navbar {
+#logo {
+  width: 7em;
+}
+
+#app {
+  width: 100%;
   display: flex;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: $mainGreen; //$mainGreen;
-  width: 100vw;
-  height:130px;
-  justify-content: space-between;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-
-button, #daycount {
-  margin: 1em;
-  padding: 10px;
-  background-color: $mainGreen;
-  color: $mainBlue;
-  border: 2px solid $mainBlue;
-  border-radius: 5px;
+button, input {
+  height: 3.5em;
+  background-color: white;
+  color: #8B50FE;
+  border: 4px solid #8B50FE;
+  border-radius: 7px;
 }
 
-button:hover {
-  background-color: $mainBlue;
-  color: $mainGreen;
-  border: 2px solid $mainBlue;
-}
-
-#landing {
-  margin-top: 130px;
-}
-
-#leftbuttons {
-  margin-left: 30px;
+#toprow {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-}
-
-#rightbuttons {
-  margin-right: 30px;
-}
-
-#logo {
-  height: 130px;
-  align-self: center;
-  justify-self: center;
-
-}
-
-.landing_content {
-  height: 80vh;
-  display:flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 }
 
-.get_started {
-  //padding: 30px;
-  align-items: center;
-  font-size: x-large;
-  border-radius: 5px;
-  height: 90px;
-  padding:25px;
-
-}
-.product_Description {
-  width: 50%;
-  font-size: x-large;
-  margin-right: 20px;
-}
-.intro_phrase {
-  font-size: 1.3em;
-}
-.bold {
-  font-weight: bold;
-}
-
-#main_gif {
-  padding: 20px;
-  max-height: 45vh;
-  max-width: 70vw;
-}
-
-.jobmodal {
-  font-size: .5em;
-  color: $mainBlue;
-  max-width: 17%;
-  border: 2px solid $mainBlue;
-  position: relative;
-  text-align: left;
-  padding: 5px;
-  margin: 5px;
-  border-radius: 4px;
-  min-width: 22em;
-}
-
-.jobmodal:hover {
-  color: $mainGreen;
-  background-color: $mainBlue;
-}
-
-.modallogo {
-  max-height: 5em;
-  max-width: 5em;
-  position: absolute;
-  right: 5px;
-}
-
-.modaltext {
-  position:relative;
-  top: -3px;
-}
-
-.bold {
-  font-weight: bold;
-}
-
-.form__field {
-  color: $mainBlue;
-  background-color: $mainGreen;
-  border: 1px solid $mainBlue;
-  border-radius: 2px;
-}
-
-.form__field {
-  background-color: $mainGreen;
-  border: 1px solid $mainBlue;
-}
-
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: $mainBlue;
-  opacity: 1; /* Firefox */
-}
-
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: $mainBlue;
-}
-
-::-ms-input-placeholder { /* Microsoft Edge */
-  color: $mainBlue;
-}
-
-input:focus {
-  outline: none !important;
-  border:1px solid $mainBlue;
-  box-shadow: 0 0 10px #719ECE;
-}
-
-#jobdetails {
-  font-size: 1em;
+#bottomrow {
   display: flex;
-  flex-wrap: wrap;
-  color: $mainBlue;
-  max-width: 50%;
-  border: 2px solid $mainBlue;
-  position: relative;
-  padding: 15px;
-  border-radius: 6px;
-  min-width: 18em;
-  margin-top: 130px;
-  justify-content: space-around;
-  // margin-left: auto;
-  // margin-right: auto;
-}
-
-#jobForm {
-  display: flex;
-  flex-direction: column;
-  color: $mainGreen;
-  justify-content: space-around;
-  align-items: center;
-}
-
-input {
-  margin: 1em;
-  color: $mainBlue;
-  background-color: $mainGreen;
-  border: 2px solid $mainBlue;
-  border-radius: .5em;
-}
-
-#dashboard {
-  margin-top: 130px;
-  display: flex;
-  flex-direction: column;
-}
-
-#dashboardtop {
-  display: flex;
-  font-size: 1.5em;
-  justify-content: space-around;
-  align-items: center;
-}
-
-
-.addjob {
-    //padding: 30px;
-    display: flex;
-    align-items: center;
-    font-size: x-large;
-    border-radius: 5px;
-    height: 90px;
-    padding:25px;
-}
-
-#daycount {
-    display: flex;
-    align-items: center;
-    max-width: 140px;
-    font-size: .7em;
-}
-
-#dashboardbottom {
-  display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
 }
-
-#dashboardbreak {
-  width: 85vw;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 5px;
-  background-color: $mainBlue;
-  height: 1px;
-}
-
-.columnsContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-.column {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.blurbContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-@media (max-width: 700px){
-  button, #daycount {
-    margin: 0.5em;
-  }
-  .product_Description {
-    width: 85%;
-  }
-  .jobdetails {
-    max-width: 85%
-  }
-  input {
-    margin: 0.5em;
-  }
-}
-
-@media (max-width: 600px){
-  button, #daycount {
-    margin: 0.43em;
-    font-size: 0.5em;
-  }
-}
-
-
-
