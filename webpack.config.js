@@ -6,7 +6,7 @@ const CopyPlugin = require("copy-webpack-plugin");
 const currentMode = process.env.NODE_ENV;
 module.exports = {
   mode: currentMode,
-  entry: './client/index.js',
+  entry: './public/script.js',
   output: {
     filename: 'bundle.js',
     publicPath: '/',
@@ -54,7 +54,7 @@ module.exports = {
   },
   plugins: [new MiniCssExtractPlugin(), new ImageMinimizerPlugin(), new CopyPlugin({
     patterns: [
-      { from: "client", to: "client" },
+      { from: "public", to: "public" },
     ],
   })],
 };
